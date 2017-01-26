@@ -2,6 +2,33 @@
 # yarn lockfile v1
 
 
+"@types/history@^2":
+  version "2.0.45"
+  resolved "https://registry.yarnpkg.com/@types/history/-/history-2.0.45.tgz#c76d79a65d189220d9d50f62e0143bdac30a564b"
+
+"@types/react-dom@^0.14.21":
+  version "0.14.21"
+  resolved "https://registry.yarnpkg.com/@types/react-dom/-/react-dom-0.14.21.tgz#a97e82d85e6802c7bb8b527746c54013b209ce09"
+  dependencies:
+    "@types/react" "*"
+
+"@types/react-router@^2.0.46":
+  version "2.0.46"
+  resolved "https://registry.yarnpkg.com/@types/react-router/-/react-router-2.0.46.tgz#01ed3e2cc443046bc6c8b6daa6deee3bcd370532"
+  dependencies:
+    "@types/history" "^2"
+    "@types/react" "*"
+
+"@types/react@*", "@types/react@^15.0.4":
+  version "15.0.4"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-15.0.4.tgz#97aedbba00448a137331aa8450232124aeb8d426"
+
+"@types/rebass@^0.2.17":
+  version "0.2.17"
+  resolved "https://registry.yarnpkg.com/@types/rebass/-/rebass-0.2.17.tgz#38766440890fbb6f860c87de350ae77dc19f0c82"
+  dependencies:
+    "@types/react" "*"
+
 abbrev@1:
   version "1.0.9"
   resolved "https://registry.yarnpkg.com/abbrev/-/abbrev-1.0.9.tgz#91b4792588a7738c25f35dd6f63752a2f8776135"

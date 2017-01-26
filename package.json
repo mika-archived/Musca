@@ -16,6 +16,10 @@
     "rebass": "^0.3.3"
   },
   "devDependencies": {
+    "@types/react": "^15.0.4",
+    "@types/react-dom": "^0.14.21",
+    "@types/react-router": "^2.0.46",
+    "@types/rebass": "^0.2.17",
     "react-hot-loader": "^1.3.1",
     "ts-loader": "^2.0.0",
     "typescript": "^2.1.5",
