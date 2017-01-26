@@ -1,0 +1,9 @@
+{
+  "name": "musca",
+  "version": "1.0.0",
+  "description": "Musca is RSS reader.",
+  "main": "index.js",
+  "repository": "git@github.com:fuyuno/Musca.git",
+  "author": "Mikazuki Fuyuno <mikazuki_fuyuno@outlook.com>",
+  "license": "MIT"
+}
