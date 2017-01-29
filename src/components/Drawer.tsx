@@ -18,6 +18,8 @@ export class Drawer extends React.Component<IDrawerProps, void> {
         position={"left"}
         style={{margin: "-1px", padding: "0px"}} >
         <DrawerMenu to="/" icon="grid">すべて</DrawerMenu>
+
+        <DrawerMenu to="new" icon="compose">Web サイトを追加</DrawerMenu>
       </RebassDrawer>
     );
   }

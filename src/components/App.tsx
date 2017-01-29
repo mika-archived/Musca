@@ -15,6 +15,10 @@ export class App extends React.Component<IAppProps, IAppState> {
     this.state = {isOpen: false};
   }
 
+  public componentWillReceiveProps(_: IAppProps): void {
+    this.setState({isOpen: false});
+  }
+
   public render(): JSX.Element {
     return (
       <div>
