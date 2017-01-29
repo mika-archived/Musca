@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Drawer as RebassDrawer, Panel, Text} from "rebass";
+import { Drawer as RebassDrawer } from "rebass";
 import { DrawerMenu } from "./DrawerMenu";
 
 interface IDrawerProps {
