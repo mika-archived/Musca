@@ -3,7 +3,7 @@ import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { Route, Router, useRouterHistory } from "react-router";
 
-import { About, Root } from "./containers"
+import { About, Root } from "./containers";
 
 const root = document.getElementById("root");
 const router = (

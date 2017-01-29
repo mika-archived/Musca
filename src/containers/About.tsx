@@ -12,6 +12,7 @@ export class About extends React.Component<void, void> {
           <h1>Musca - RSS reader</h1>
           <p>
             Musca ("ムスカ") は、サーバーサイドプログラムなしで動作する RSS Reader です。
+            必要なファイルをダウンロードし、レンタルサーバーなどで配置するだけで使用できます。
           </p>
 
           <Section heading="オープンソースライセンス">
@@ -20,6 +21,7 @@ export class About extends React.Component<void, void> {
             </p>
             <ul>
               <li>React.js</li>
+              <li>React Geomicons</li>
               <li>React Router</li>
               <li>Rebass</li>
             </ul>

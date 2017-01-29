@@ -4,11 +4,14 @@ import { Link } from "react-router";
 import { NavItem, Space, Toolbar } from "rebass";
 import { Drawer } from "./Drawer";
 
+interface IHeaderProps {
+}
+
 interface IHeaderStates {
   isOpen: boolean;
 }
 
-export class Header extends React.Component<void, IHeaderStates> {
+export class Header extends React.Component<IHeaderProps, IHeaderStates> {
   public constructor() {
     super();
     this.state = {isOpen: false};
@@ -21,15 +24,13 @@ export class Header extends React.Component<void, IHeaderStates> {
             <Icon name="list"
               style={{height: "28px", width: "28px"}} />
           </NavItem>
-          <Space
-            auto
-            x={1}
-          />
-          <NavItem is={Link} small={true} {...{to: "/about"}}>
+          <Space  x={1} auto />
+          <NavItem is={Link} {...{to: "/about"}}>
             About
           </NavItem>
         </Toolbar>
-        <Drawer isOpen={this.state.isOpen} onDismiss={this.onDismiss.bind(this)} />
+        <Drawer isOpen={this.state.isOpen}
+          onDismiss={this.onDismiss.bind(this)} />
       </div>
     );
   }
