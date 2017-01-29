@@ -1,15 +1,21 @@
-import createHashHistory from "history/lib/createHashHistory";
 import * as React from "react";
 import * as ReactDOM from "react-dom";
-import { Route, Router, useRouterHistory } from "react-router";
+import { Provider } from "react-redux";
+import { browserHistory, Router } from "react-router";
+import { syncHistoryWithStore } from "react-router-redux";
 
-import { About, Root } from "./containers";
+import { Routings } from "./routes";
+import { configureStore } from "./store/configureStore";
 
-const root = document.getElementById("root");
+declare var window;
+
+let state = window.__initialState__ || {};
+const store = configureStore(browserHistory as any, state); // tslint:disable-line:no-any
+const history = syncHistoryWithStore(browserHistory, store);
+
 const router = (
-  <Router history={useRouterHistory(createHashHistory)()}>
-    <Route path="/" component={Root} />
-    <Route path="/about" component={About} />
-  </Router>
+  <Provider store={store}>
+    <Router history={history} routes={Routings} />
+  </Provider>
 );
-ReactDOM.render(router, root);
+ReactDOM.render(router, document.getElementById("root"));
