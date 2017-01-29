@@ -1,6 +1,6 @@
 import * as React from "react";
-import { Link } from "react-router";
-import { Divider, Drawer as RebassDrawer, Panel, Text} from "rebass";
+import { Drawer as RebassDrawer, Panel, Text} from "rebass";
+import { DrawerMenu } from "./DrawerMenu";
 
 interface IDrawerProps {
   isOpen: boolean;
@@ -17,8 +17,7 @@ export class Drawer extends React.Component<IDrawerProps, void> {
         open={this.props.isOpen}
         position={"left"}
         style={{margin: "-1px", padding: "0px"}} >
-        <Link to="/">すべて</Link>
-        <Divider />
+        <DrawerMenu to="/" icon="grid">すべて</DrawerMenu>
       </RebassDrawer>
     );
   }
