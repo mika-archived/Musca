@@ -10,6 +10,7 @@ const argv = require("minimist")(process.argv.slice(2));
 var server = new WebpackDevServer(compiler, {
   historyApiFallback: true,
   hot: true,
+  inline: true,
   publicPath: config.output.publicPath,
   contentBase: "app/",
   stats: {
