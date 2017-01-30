@@ -5,11 +5,12 @@ import { browserHistory, Router } from "react-router";
 import { syncHistoryWithStore } from "react-router-redux";
 
 import { routings } from "./routes";
+import { initialState, IRootState } from "./states/IRootState";
 import { configureStore } from "./store/configureStore";
 
 declare var window;
 
-let state = window.__initialState__ || {};
+let state: IRootState = window.__initialState__ || initialState;
 const store = configureStore(browserHistory as any, state); // tslint:disable-line:no-any
 const history = syncHistoryWithStore(browserHistory, store);
 

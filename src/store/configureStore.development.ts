@@ -5,7 +5,9 @@ import * as Redux from "redux";
 import * as persistState from "redux-localstorage";
 import * as createLogger from "redux-logger";
 import thunkMiddleware from "redux-thunk";
+
 import * as reducers from "../reducers";
+import { IRootState } from "../states/IRootState";
 
 declare var module; // for HMR
 
@@ -13,7 +15,7 @@ const loggerMiddleware: Redux.Middleware = createLogger();
 const persistStateMiddleware = persistState();
 
 // tslint:disable:no-any
-export function configureStore(history: History.History, initialState: any): Redux.Store<{}> {
+export function configureStore(history: History.History, initialState: IRootState): Redux.Store<{}> {
   let store = createStore(reducers.rootReducer, initialState, compose(
     applyMiddleware(
       thunkMiddleware,

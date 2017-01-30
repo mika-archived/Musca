@@ -1,7 +1,12 @@
 import * as React from "react";
 import { Button, Container, Input, Panel, PanelHeader } from "rebass";
+import { registerFunc } from "../actions/UserAction";
 
-export interface INewProps {}
+
+export interface INewProps {
+  register: registerFunc;
+}
+
 interface INewState {}
 
 export class New extends React.Component<INewProps, INewState> {

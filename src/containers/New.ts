@@ -1,4 +1,6 @@
 import { connect } from "react-redux";
+
+import { register } from "../actions/UserAction";
 import { INewProps, New } from "../components/New";
 import { IRootState } from "../states/IRootState";
 
@@ -10,7 +12,7 @@ function mapStateToProps(state: IRootState): INewProps {
 
 function mapDispatchToProps(dispatch: Function): INewProps {
   return {
-
+    register
   } as INewProps;
 }
 
