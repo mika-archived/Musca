@@ -2,7 +2,7 @@
 var WebpackDevServer = require("webpack-dev-server");
 var webpack = require("webpack");
 var childProcess = require("child_process");
-var config = require("./webpack.config.js");
+var config = require("./webpack.config.dev.js");
 var compiler = webpack(config);
 
 const argv = require("minimist")(process.argv.slice(2));
