@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Button, Container, Message, Panel, PanelHeader } from "rebass";
+import { Button, Container, Panel, PanelHeader } from "rebass";
 import { Field } from "redux-form";
 import { registerFunc } from "../actions/UserAction";
 import { IFormProps } from "../internal/ReduxFormWrapper";
@@ -52,5 +52,7 @@ export class New extends React.Component<INewProps, INewState> {
     );
   }
 
-  private onSubmit(value: INewFormProps): void {}
+  private onSubmit(value: INewFormProps): void {
+    this.props.register(value.name, value.url);
+  }
 }

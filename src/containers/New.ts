@@ -1,4 +1,4 @@
-// import { connect } from "react-redux";
+import { connect } from "react-redux";
 import { reduxForm } from "redux-form";
 
 import { register } from "../actions/UserAction";
@@ -12,7 +12,7 @@ function mapStateToProps(state: IRootState): INewProps {
 
 function mapDispatchToProps(dispatch: Function): INewProps {
   return {
-    register
+    register: (name: string, url: string) => dispatch(register(name, url))
   } as INewProps;
 }
 
@@ -27,8 +27,8 @@ function validate(values: INewFormProps): INewFormProps {
   return errors;
 }
 
-// const initialize = reduxForm({form: "New", validate})(New);
+const initialize = reduxForm({form: "New", validate})(New);
 
 // tslint:disable-next-line:no-default-export
-export default reduxForm({form: "New", validate})(New);
-// export default connect(mapStateToProps, mapDispatchToProps)(initialize);
+export default connect(mapStateToProps, mapDispatchToProps)(initialize);
+// export default reduxForm({form: "New", validate})(New);
