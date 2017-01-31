@@ -9,7 +9,6 @@ declare var process;
 // tslint:disable:no-any
 export function configureStore(history: History.History, initialState: IRootState) {
   if (process.env.NODE_ENV === "development") {
-    console.log("Development");
     return configureStoreDev(history, initialState);
   } else {
     return configureStorePro(history, initialState);
