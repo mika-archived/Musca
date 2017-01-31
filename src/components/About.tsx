@@ -21,7 +21,8 @@ export class About extends React.Component<IAboutProps, IAboutState> {
       { name: "redux-form", repo: "erikras/redux-form" },
       { name: "redux-localstorage", repo: "elgerlambert/redux-localstorage" },
       { name: "Logger for Redux", repo: "evgenyrodionov/redux-logger" },
-      { name: "Redux Thunk", repo: "gaearon/redux-thunk" }
+      { name: "Redux Thunk", repo: "gaearon/redux-thunk" },
+      { name: "whatwg-fetch", repo: "github/fetch" }
     ];
     return (
       <div>
