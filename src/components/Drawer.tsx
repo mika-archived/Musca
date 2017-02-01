@@ -1,8 +1,11 @@
 import * as React from "react";
 import { Drawer as RebassDrawer } from "rebass";
+
+import { IRss } from "../models/IRss";
 import { DrawerMenu } from "./DrawerMenu";
 
 interface IDrawerProps {
+  websites: IRss[];
   isOpen: boolean;
   onDismiss: () => boolean;
 }
@@ -18,7 +21,11 @@ export class Drawer extends React.Component<IDrawerProps, void> {
         position={"left"}
         style={{margin: "-1px", padding: "0px"}} >
         <DrawerMenu to="/" icon="grid">すべて</DrawerMenu>
-
+        {this.props.websites.map((w, i) => {
+          return (
+            <DrawerMenu key={i} to={`/read/${w.url.replace(/https?:\/\//, "")}`} icon="bookmark">{w.name}</DrawerMenu>
+          );
+        })}
         <DrawerMenu to="new" icon="compose">購読サイトを追加</DrawerMenu>
       </RebassDrawer>
     );

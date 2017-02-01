@@ -4,7 +4,7 @@ import { IRootState } from "../states/IRootState";
 
 function mapStateToProps(state: IRootState): IAppProps {
   return {
-
+    websites: state.user.websites
   } as IAppProps;
 }
 

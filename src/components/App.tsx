@@ -2,9 +2,14 @@ import * as React from "react";
 import Icon from "react-geomicons";
 import { Link } from "react-router";
 import { Fixed, NavItem, Space, Toolbar } from "rebass";
+
+import { IRss } from "../models/IRss";
 import { Drawer } from "./Drawer";
 
-export interface IAppProps {}
+export interface IAppProps {
+  websites: IRss[];
+}
+
 interface IAppState {
   isOpen: boolean;
 }
@@ -34,7 +39,7 @@ export class App extends React.Component<IAppProps, IAppState> {
             </NavItem>
           </Toolbar>
         </Fixed>
-        <Drawer isOpen={this.state.isOpen} onDismiss={this.onDismiss.bind(this)} />
+        <Drawer isOpen={this.state.isOpen} onDismiss={this.onDismiss.bind(this)} websites={this.props.websites} />
         <div style={{paddingTop: "48px"}}>
           {this.props.children}
         </div>
