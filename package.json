@@ -41,7 +41,6 @@
     "@types/redux-form": "^6.3.2",
     "@types/redux-logger": "^2.6.34",
     "@types/redux-thunk": "^2.1.0",
-    "@types/uuid": "^2.0.29",
     "@types/whatwg-fetch": "^0.0.33",
     "react-hot-loader": "^3.0.0-beta.6",
     "ts-loader": "^2.0.0",

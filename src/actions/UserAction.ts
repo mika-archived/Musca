@@ -1,3 +1,5 @@
+import * as uuidV4 from "uuid/v4";
+
 import { IAction } from "../models/IAction";
 import { IRss } from "../models/IRss";
 import { ActionTypes } from "./ActionTypes";
@@ -6,6 +8,7 @@ export interface registerFunc { (name: string, url: string): IAction; } // tslin
 export function register(name: string, url: string): IAction {
   return {
     rss: {
+      id: uuidV4(),
       name,
       url
     } as IRss,

@@ -10,10 +10,6 @@
   version "4.5.0"
   resolved "https://registry.yarnpkg.com/@types/history/-/history-4.5.0.tgz#2f5c3aad4fbd00f89e99b83083e354bc5308e307"
 
-"@types/node@*":
-  version "7.0.4"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-7.0.4.tgz#9aabc135979ded383325749f508894c662948c8b"
-
 "@types/react-dom@^0.14.21":
   version "0.14.21"
   resolved "https://registry.yarnpkg.com/@types/react-dom/-/react-dom-0.14.21.tgz#a97e82d85e6802c7bb8b527746c54013b209ce09"
@@ -82,12 +78,6 @@
   resolved "https://registry.yarnpkg.com/@types/redux/-/redux-3.6.0.tgz#f1ebe1e5411518072e4fdfca5c76e16e74c1399a"
   dependencies:
     redux "*"
-
-"@types/uuid@^2.0.29":
-  version "2.0.29"
-  resolved "https://registry.yarnpkg.com/@types/uuid/-/uuid-2.0.29.tgz#939a198ab73567f811ab84f670d2be9c25addd41"
-  dependencies:
-    "@types/node" "*"
 
 "@types/whatwg-fetch@^0.0.33":
   version "0.0.33"

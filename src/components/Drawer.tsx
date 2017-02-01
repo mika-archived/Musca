@@ -21,9 +21,9 @@ export class Drawer extends React.Component<IDrawerProps, void> {
         position={"left"}
         style={{margin: "-1px", padding: "0px"}} >
         <DrawerMenu to="/" icon="grid">すべて</DrawerMenu>
-        {this.props.websites.map((w, i) => {
+        {this.props.websites.map((w) => {
           return (
-            <DrawerMenu key={i} to={`/read/${w.url.replace(/https?:\/\//, "")}`} icon="bookmark">{w.name}</DrawerMenu>
+            <DrawerMenu key={w.id} to={`/read/${w.id.replace(/https?:\/\//, "")}`} icon="bookmark">{w.name}</DrawerMenu>
           );
         })}
         <DrawerMenu to="new" icon="compose">購読サイトを追加</DrawerMenu>
