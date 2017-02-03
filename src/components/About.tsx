@@ -1,5 +1,7 @@
 import * as React from "react";
+import { Link } from "react-router";
 import { Container } from "rebass";
+
 import { Section } from "../components/Section";
 import { ISoftware } from "../models/ISoftware";
 
@@ -32,6 +34,7 @@ export class About extends React.Component<IAboutProps, IAboutState> {
           <p>
             Musca ("ムスカ") は、サーバーサイドプログラムなしで動作する RSS Reader です。
             必要なファイルをダウンロードし、レンタルサーバーなどで配置するだけで使用できます。
+            なお、複数ブラウザー間でデータを共有したい場合は、<Link to="/help#データの引き継ぎ">データの引き継ぎ</Link>を参照してくd
           </p>
 
           <Section heading="オープンソースライセンス">

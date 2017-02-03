@@ -34,6 +34,9 @@ export class App extends React.Component<IAppProps, IAppState> {
                 style={{height: "28px", width: "28px"}} />
             </NavItem>
             <Space  x={1} auto />
+            <NavItem is={Link} {...{to: "/help"}}>
+              Help
+            </NavItem>
             <NavItem is={Link} {...{to: "/about"}}>
               About
             </NavItem>
