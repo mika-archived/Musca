@@ -10,8 +10,7 @@ module.exports = {
   },
   output: {
     filename: "[name].js",
-    path: path.join(__dirname, "app"),
-    publicPath: "/assets/"
+    path: path.join(__dirname, "app", "assets"),
   },
   resolve: {
     extensions: ["", ".ts", ".tsx", ".js"]

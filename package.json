@@ -7,6 +7,7 @@
   "author": "Mikazuki Fuyuno <mikazuki_fuyuno@outlook.com>",
   "license": "MIT",
   "scripts": {
+    "clean": "rm -r app/assets | true",
     "build": "NODE_ENV=production webpack --config webpack.config.production.js",
     "dev-server": "node server.js"
   },
