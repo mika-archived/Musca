@@ -8,7 +8,7 @@ interface ISectionProps {
 export class Section extends React.Component<ISectionProps, void> {
   public render(): JSX.Element {
     return (
-      <RebassSection>
+      <RebassSection style={{paddingTop: "32px"}}>
         <SectionHeader heading={this.props.heading} />
         {this.props.children}
       </RebassSection>

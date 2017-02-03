@@ -12,6 +12,7 @@ export class About extends React.Component<IAboutProps, IAboutState> {
   public render(): JSX.Element {
     const softwares: ISoftware[] = [
       { name: "history", repo: "mjackson/history" },
+      { name: "lz-string", repo: "pieroxy/lz-string" },
       { name: "React", repo: "facebook/react" },
       { name: "react-geomicons", repo: "jxnblk/react-geomicons" },
       { name: "React Helmet", repo: "nfl/react-helmet" },
@@ -34,7 +35,7 @@ export class About extends React.Component<IAboutProps, IAboutState> {
           <p>
             Musca ("ムスカ") は、サーバーサイドプログラムなしで動作する RSS Reader です。
             必要なファイルをダウンロードし、レンタルサーバーなどで配置するだけで使用できます。
-            なお、複数ブラウザー間でデータを共有したい場合は、<Link to="/help#データの引き継ぎ">データの引き継ぎ</Link>を参照してくd
+            なお、複数ブラウザー間でデータを共有したい場合は、<Link to="/ixport#">こちら</Link>からできます。
           </p>
 
           <Section heading="オープンソースライセンス">
