@@ -1,3 +1,4 @@
+import { IImportAction } from "./IImportAction";
 import { IRegisterAction } from "./IRegisterAction";
 
-export { IRegisterAction};
+export { IImportAction, IRegisterAction};

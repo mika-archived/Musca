@@ -15,3 +15,11 @@ export function register(name: string, url: string): IAction {
     type: ActionTypes.REGISTER_NEW_SITE,
   } as IAction;
 }
+
+export interface _importFunc { (json: any): IAction; } // tslint:disable-line
+export function _import(json: any): IAction { // tslint:disable-line:no-any
+  return {
+    json,
+    type: ActionTypes.IMPORT_CONFIGURATION
+  } as IAction;
+}
