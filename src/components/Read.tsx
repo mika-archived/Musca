@@ -18,7 +18,13 @@ interface IReadState {}
 
 export class Read extends React.Component<IReadProps, IReadState> {
 
+  // Other page -> this.
   public componentDidMount(): void {
+    this.props.sync(this.props.website);
+  }
+
+  // this (Other website ID) -> this.
+  public componentDidUpdate(): void {
     this.props.sync(this.props.website);
   }
 
