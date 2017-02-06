@@ -1,6 +1,8 @@
 import * as React from "react";
 import * as Helmet from "react-helmet";
-import { Container, Progress } from "rebass";
+import ProgressButton from "react-progress-button";
+import { Container } from "rebass";
+import "../../node_modules/react-progress-button/react-progress-button.css";
 
 import { syncFunc } from "../actions/SystemAction";
 import { IRss } from "../models/IRss";
@@ -35,10 +37,9 @@ export class Read extends React.Component<IReadProps, IReadState> {
         <Helmet title={this.props.website.name} />
         <h2>{this.props.website.name}</h2>
         {(this.props.syncing || this.props.contents === undefined) ? (
-          <div>
-            <Progress value={0.5} />
-            <p>同期中...</p>
-          </div>
+          <ProgressButton state={"loading"} style={{color: "rgb(0, 136, 238)"}}>
+            Loading...
+          </ProgressButton>
         ) : (
           contents.entry !== undefined ?
             (

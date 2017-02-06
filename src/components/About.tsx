@@ -17,6 +17,7 @@ export class About extends React.Component<IAboutProps, IAboutState> {
       { name: "React", repo: "facebook/react" },
       { name: "react-geomicons", repo: "jxnblk/react-geomicons" },
       { name: "React Helmet", repo: "nfl/react-helmet" },
+      { name: "react-progress-button", repo: "mathieudutour/react-progress-button" },
       { name: "React Redux", repo: "reactjs/react-redux" },
       { name: "React Router", repo: "reacttraining/react-router" },
       { name: "react-router-redux", repo: "reactjs/react-router-redux" },
