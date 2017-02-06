@@ -15,7 +15,7 @@ export function system(state: ISystemState = initialState, action: IAction): ISy
       let contents = Object.assign(state.contents, {
         [feeds.website.id]: feeds.contents
       });
-      return Object.assign(state, {
+      return Object.assign({}, {
         contents,
         syncing: false
       } as ISystemState);

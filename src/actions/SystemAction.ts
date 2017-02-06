@@ -35,7 +35,7 @@ function syncRss(website: IRss): any {
 }
 
 function shouldSyncRss(state: IRootState, website: IRss): boolean {
-  if (state.system.contents[website.id] === undefined) {
+  if (state.system.contents[website.id] === undefined && !state.system.syncing) {
     return true;
   }
   return false;
