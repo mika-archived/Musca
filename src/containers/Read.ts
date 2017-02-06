@@ -1,7 +1,9 @@
 import { connect } from "react-redux";
 
+import { sync } from "../actions/SystemAction";
 import { IReadProps, Read } from "../components/Read";
 import { IOwnProps } from "../internal/ReactRouter";
+import { IRss } from "../models/IRss";
 import { IRootState } from "../states/IRootState";
 
 function mapStateToProps(state: IRootState, ownProps: IOwnProps): IReadProps {
@@ -12,7 +14,7 @@ function mapStateToProps(state: IRootState, ownProps: IOwnProps): IReadProps {
 
 function mapDispatchToProps(dispatch: Function): IReadProps {
   return {
-
+    sync: (website: IRss) => dispatch(sync(website))
   } as IReadProps;
 }
 

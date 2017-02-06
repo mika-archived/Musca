@@ -2,6 +2,7 @@ import * as React from "react";
 import * as Helmet from "react-helmet";
 import { Button, Container, Panel, PanelHeader } from "rebass";
 import { Field } from "redux-form";
+
 import { registerFunc } from "../actions/UserAction";
 import { IFormProps } from "../internal/ReduxFormWrapper";
 import { FieldInput } from "./FieldInput";
