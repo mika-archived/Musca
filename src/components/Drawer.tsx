@@ -20,7 +20,7 @@ export class Drawer extends React.Component<IDrawerProps, void> {
         open={this.props.isOpen}
         position={"left"}
         style={{margin: "-1px", padding: "0px"}} >
-        <DrawerMenu to="/" icon="grid">すべて</DrawerMenu>
+        <DrawerMenu to="/" icon="grid">トップ</DrawerMenu>
         {this.props.websites.map((w) => {
           return (
             <DrawerMenu key={w.id} to={`/read/${w.id.replace(/https?:\/\//, "")}`} icon="bookmark">{w.name}</DrawerMenu>

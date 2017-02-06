@@ -58,8 +58,7 @@ export class Ixport extends React.Component<IIxportProps, IIxportLocalStorage> {
   }
 
   private onSubmit(value: IIxportFormProps): void {
-    // localStorage.setItem("redux", LzString.decompressFromEncodedURIComponent(value.importStr));
-    // location.reload();
     this.props._import(importLocalStorage(value.importStr));
+    this.props.reset();
   }
 }

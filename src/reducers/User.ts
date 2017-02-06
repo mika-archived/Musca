@@ -9,15 +9,15 @@ export function user(state: IUserState = initialState, action: IAction): IUserSt
     case ActionTypes.REGISTER_NEW_SITE:
       websites = state.websites;
       websites.push((<IRegisterAction> action).rss);
-      return {
+      return Object.assign({}, {
         websites
-      } as IUserState;
+      } as IUserState);
 
     case ActionTypes.IMPORT_CONFIGURATION:
       websites = ((<IImportAction> action).json).websites;
-      return {
+      return Object.assign({}, {
         websites
-      } as IUserState;
+      } as IUserState);
     default:
       return state;
   }
