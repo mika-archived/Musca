@@ -1,4 +1,5 @@
 import * as React from "react";
+import * as Helmet from "react-helmet";
 import { Link } from "react-router";
 import { Container } from "rebass";
 
@@ -30,6 +31,7 @@ export class About extends React.Component<IAboutProps, IAboutState> {
     ];
     return (
       <div>
+        <Helmet title="About" />
         <Container>
           <h1>Musca - RSS reader</h1>
           <p>

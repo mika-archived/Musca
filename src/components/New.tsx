@@ -1,4 +1,5 @@
 import * as React from "react";
+import * as Helmet from "react-helmet";
 import { Button, Container, Panel, PanelHeader } from "rebass";
 import { Field } from "redux-form";
 import { registerFunc } from "../actions/UserAction";
@@ -24,6 +25,7 @@ export class New extends React.Component<INewProps, INewState> {
   public render(): JSX.Element {
     return (
       <form onSubmit={this.props.handleSubmit(this.onSubmit.bind(this))}>
+        <Helmet title="購読サイトを追加" />
         <Container style={{paddingTop: "16px", paddingBottom: "16px"}}>
           <Panel theme={"primary"}>
             <PanelHeader inverted>

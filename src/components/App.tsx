@@ -1,5 +1,6 @@
 import * as React from "react";
 import Icon from "react-geomicons";
+import * as Helmet from "react-helmet";
 import { Link } from "react-router";
 import { Fixed, NavItem, Space, Toolbar } from "rebass";
 
@@ -27,6 +28,9 @@ export class App extends React.Component<IAppProps, IAppState> {
   public render(): JSX.Element {
     return (
       <div>
+        <Helmet title="Musca"
+          titleTemplate="%s - Musca"
+          defaultTitle="Musca" />
         <Fixed top={true} left={true} right={true}>
           <Toolbar>
             <NavItem is={"a"} {...{onClick: this.onClick.bind(this), style: {width: "48px"}}}>
