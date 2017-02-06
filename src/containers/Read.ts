@@ -4,11 +4,15 @@ import { sync } from "../actions/SystemAction";
 import { IReadProps, Read } from "../components/Read";
 import { IOwnProps } from "../internal/ReactRouter";
 import { IRss } from "../models/IRss";
+import { IResult } from "../models/yql/IResult";
 import { IRootState } from "../states/IRootState";
 
 function mapStateToProps(state: IRootState, ownProps: IOwnProps): IReadProps {
+  const website = state.user.websites.find((w) => w.id === ownProps.params.id);
   return {
-    website: state.user.websites.find((w) => w.id === ownProps.params.id)
+    contents: state.system.contents[website.id] as IResult,
+    syncing: state.system.syncing,
+    website
   } as IReadProps;
 }
 

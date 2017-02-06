@@ -10,7 +10,7 @@ export interface IEntry {
   author: string | IAuthor;
   link: ILink;
   url: string;
-  title: ITypedContent;
+  title: ITypedContent | string;
   thumbnail: IThumbnail;
   content: ITypedContent;
 }
