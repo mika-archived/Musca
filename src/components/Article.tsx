@@ -15,14 +15,6 @@ export interface IArticleProps {
 interface IArticleState {}
 
 export class Article extends React.Component<IArticleProps, IArticleState> {
-  public componentDidMount(): void {
-    window.scroll(0, 0);
-  }
-
-  public componentDidUpdate(): void {
-    window.scroll(0, 0);
-  }
-
   public render(): JSX.Element {
     let content;
     if ((this.props.content as IEntry).id !== undefined) {

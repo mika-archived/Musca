@@ -17,8 +17,12 @@ export class Root extends React.Component<IRootProps, IRootState> {
   public render(): JSX.Element {
     return (
       <Provider store={this.props.store}>
-        <Router history={this.props.history} routes={routings} />
+        <Router history={this.props.history} routes={routings} onUpdate={this.onUpdate.bind(this)} />
       </Provider>
     );
+  }
+
+  private onUpdate(): void {
+    window.scroll(0, 0);
   }
 }
