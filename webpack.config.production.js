@@ -13,7 +13,7 @@ module.exports = {
     path: path.join(__dirname, "app", "assets"),
   },
   resolve: {
-    extensions: ["", ".ts", ".tsx", ".js"]
+    extensions: ["", ".ts", ".tsx", ".js", ".css"]
   },
   module: {
     loaders: [
@@ -23,6 +23,13 @@ module.exports = {
           "ts"
         ],
         exclude: /node_modules/
+      },
+      {
+        test: /\.css$/,
+        loaders: [
+          "style",
+          "css"
+        ],
       }
     ]
   },
