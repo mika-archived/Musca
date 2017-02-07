@@ -31,7 +31,7 @@ export class Entry extends React.Component<IEnrtyProps, void> {
     return (
       <div>
         <div style={styles.root}>
-          <Link to={this.props.id} style={styles.link}>
+          <Link to={`/read/${this.props.id}`} style={styles.link}>
             {this.props.title}
           </Link>
         </div>

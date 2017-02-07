@@ -17,7 +17,7 @@ module.exports = {
     publicPath: "/assets/"
   },
   resolve: {
-    extensions: ["", ".ts", ".tsx", ".js", ".css"]
+    extensions: ["", ".ts", ".tsx", ".js", ".css", ".scss"]
   },
   module: {
     loaders: [
@@ -30,10 +30,11 @@ module.exports = {
         exclude: /node_modules/
       },
       {
-        test: /\.css$/,
+        test: /\.s?css$/,
         loaders: [
           "style",
-          "css"
+          "css",
+          "sass"
         ],
       }
     ]

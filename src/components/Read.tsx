@@ -2,7 +2,6 @@ import * as React from "react";
 import * as Helmet from "react-helmet";
 import ProgressButton from "react-progress-button";
 import { Container } from "rebass";
-import "../../node_modules/react-progress-button/react-progress-button.css";
 
 import { syncFunc } from "../actions/SystemAction";
 import { IRss } from "../models/IRss";
@@ -44,11 +43,11 @@ export class Read extends React.Component<IReadProps, IReadState> {
           contents.entry !== undefined ?
             (
               contents.entry.map((w, index) => {
-                return (<Entry key={index} id={`${this.props.website}/${index}`} title={w.title.toString()} />);
+                return (<Entry key={index} id={`${this.props.website.id}/${index}`} title={w.title.toString()} />);
               })
             ) : (
               contents.item.map((w, index) => {
-                return (<Entry key={index} id={`${this.props.website}/${index}`} title={w.title} />);
+                return (<Entry key={index} id={`${this.props.website.id}/${index}`} title={w.title} />);
               })
             )
         )

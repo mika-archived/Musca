@@ -2,13 +2,15 @@ import { createHistory } from "history";
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { AppContainer } from "react-hot-loader";
-// import { browserHistory } from "react-router";
 import { useRouterHistory} from "react-router";
 import { syncHistoryWithStore } from "react-router-redux";
 
 import { Root } from "./containers/Root";
 import { initialState, IRootState } from "./states/IRootState";
 import { configureStore } from "./store/configureStore";
+
+import "../node_modules/react-progress-button/react-progress-button.css";
+import "./styles/index.scss";
 
 declare var module;
 declare var window;
